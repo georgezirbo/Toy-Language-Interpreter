@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="722.0" prefWidth="791.0" style="-fx-background-color: #009f92;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ListView fx:id="IDView" layoutX="31.0" layoutY="126.0" onMouseClicked="#OnIDClicked" prefHeight="190.0" prefWidth="46.0" style="-fx-border-color: black;" styleClass="list-cell" stylesheets="@run.css" />
+      <Label alignment="CENTER" layoutX="31.0" layoutY="96.0" prefHeight="24.0" prefWidth="46.0" text="#ID" textAlignment="CENTER" textFill="WHITE" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="92.0" layoutY="29.0" prefHeight="24.0" prefWidth="401.0" text="ExeStack" textFill="WHITE" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ListView fx:id="ExeStackView" layoutX="106.0" layoutY="59.0" prefHeight="257.0" prefWidth="387.0" style="-fx-border-color: black;" styleClass="list-cell" stylesheets="@run.css" />
+      <ListView fx:id="FileTableView" layoutX="623.0" layoutY="59.0" prefHeight="257.0" prefWidth="143.0" style="-fx-border-color: black;" styleClass="list-cell" stylesheets="@run.css" />
+      <TextField fx:id="NoPrgStates" alignment="CENTER" layoutX="31.0" layoutY="59.0" prefHeight="31.0" prefWidth="46.0" style="-fx-border-color: black;" />
+      <Label alignment="CENTER" layoutX="31.0" layoutY="29.0" prefHeight="24.0" prefWidth="46.0" text="#No." textAlignment="CENTER" textFill="WHITE" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="623.0" layoutY="29.0" prefHeight="24.0" prefWidth="143.0" text="FileTable" textFill="WHITE" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="524.0" layoutY="29.0" prefHeight="24.0" prefWidth="72.0" text="Out" textFill="WHITE" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ListView fx:id="OutView" layoutX="524.0" layoutY="59.0" prefHeight="257.0" prefWidth="72.0" style="-fx-border-color: black;" styleClass="list-cell" stylesheets="@run.css" />
+      <Button fx:id="OneStepButton" layoutX="31.0" layoutY="661.0" mnemonicParsing="false" onAction="#OneStepButtonOnAction" prefHeight="39.0" prefWidth="739.0" style="-fx-background-color: #e9a07c; -fx-border-color: black;" text="OneStep" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+      <Label alignment="CENTER" layoutX="-30.0" layoutY="347.0" prefHeight="24.0" prefWidth="347.0" text="SymTable" textFill="WHITE" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="229.0" layoutY="347.0" prefHeight="24.0" prefWidth="347.0" text="HeapTable" textFill="WHITE" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="SymTableView" layoutX="31.0" layoutY="375.0" prefHeight="258.0" prefWidth="226.0" style="-fx-border-color: black;" stylesheets="@run.css">
+         <columns>
+            <TableColumn fx:id="SymName" editable="false" prefWidth="108.79998779296875" resizable="false" style="-fx-alignment: CENTER" text="Name" />
+            <TableColumn fx:id="SymValue" prefWidth="114.39996337890625" style="-fx-alignment: CENTER" text="Value" />
+         </columns>
+      </TableView>
+      <TableView fx:id="HeapTableView" layoutX="293.0" layoutY="375.0" prefHeight="258.0" prefWidth="220.0" style="-fx-border-color: black;" stylesheets="@run.css">
+         <columns>
+            <TableColumn fx:id="HeapAddress" prefWidth="97.5999755859375" style="-fx-alignment: CENTER" text="Address" />
+            <TableColumn fx:id="HeapValue" prefWidth="120.00006103515625" style="-fx-alignment: CENTER" text="Value" />
+         </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="558.0" layoutY="347.0" prefHeight="24.0" prefWidth="207.0" text="LockTable" textFill="WHITE" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="LockTableView" layoutX="543.0" layoutY="375.0" prefHeight="258.0" prefWidth="220.0" style="-fx-border-color: black;" stylesheets="@run.css">
+         <columns>
+            <TableColumn fx:id="LockLocation" prefWidth="112.80010986328125" style="-fx-alignment: CENTER" text="Location" />
+            <TableColumn fx:id="LockValue" prefWidth="106.39990234375" style="-fx-alignment: CENTER" text="Value" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

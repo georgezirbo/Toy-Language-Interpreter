@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Toy Language Interpreter:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Toy_Language_Interpreter_jar</output-path>
+    <root id="archive" name="Toy Language Interpreter.jar">
+      <element id="module-output" name="Toy Language Interpreter" />
+    </root>
+  </artifact>
+</component>
